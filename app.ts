@@ -1,24 +1,21 @@
-function add(num1: number | string, num2: number | string){
-  let result;
-  if(typeof num1 === 'number' && typeof num2 === 'number'){
-    result = num1 +num2;
-  }
-  else
-  {
-    // if strings
-    result = num1.toString() + num2.toString(); 
+let userData: unknown;
+let trueData: string;
 
-  }
-  return result;
+userData = 'now'
+userData = 5
+
+if(typeof userData === "string"){
+  trueData = userData
+}
+
+function generateErrorCode(description: string, errorcode: number) : never {
+  throw {message: description, code: errorcode}
 
 }
 
-const var1 = 5
-const var2 = 6
-const varstring1 = "hey"
-const varstring2 = "yeheyyyyyy"
+function infiniteloop(): never {
+  while(true){}
+}
 
-
-console.log(add(var1, var2))
-console.log(add(varstring1, varstring2))
-
+generateErrorCode("Error Happened", 402)
+infiniteloop();

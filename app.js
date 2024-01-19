@@ -1,17 +1,15 @@
-function add(num1, num2) {
-    var result;
-    if (typeof num1 === 'number' && typeof num2 === 'number') {
-        result = num1 + num2;
-    }
-    else {
-        // if strings
-        result = num1.toString() + num2.toString();
-    }
-    return result;
+var userData;
+var trueData;
+userData = 'now';
+userData = 5;
+if (typeof userData === "string") {
+    trueData = userData;
 }
-var var1 = 5;
-var var2 = 6;
-var varstring1 = "hey";
-var varstring2 = "yeheyyyyyy";
-console.log(add(var1, var2));
-console.log(add(varstring1, varstring2));
+function generateErrorCode(description, errorcode) {
+    throw { message: description, code: errorcode };
+}
+function infiniteloop() {
+    while (true) { }
+}
+generateErrorCode("Error Happened", 402);
+infiniteloop();
