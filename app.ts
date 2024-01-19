@@ -1,21 +1,13 @@
-let userData: unknown;
-let trueData: string;
+class Vehicle {
+  type: string
+  color: string
 
-userData = 'now'
-userData = 5
-
-if(typeof userData === "string"){
-  trueData = userData
+  constructor(t: string, c: string){
+    this.type = t;
+    this.color = c;
+  }
 }
 
-function generateErrorCode(description: string, errorcode: number) : never {
-  throw {message: description, code: errorcode}
+const car = new Vehicle('Ford', 'blue');
 
-}
-
-function infiniteloop(): never {
-  while(true){}
-}
-
-generateErrorCode("Error Happened", 402)
-infiniteloop();
+console.log(car.color);

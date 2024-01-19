@@ -1,15 +1,9 @@
-var userData;
-var trueData;
-userData = 'now';
-userData = 5;
-if (typeof userData === "string") {
-    trueData = userData;
-}
-function generateErrorCode(description, errorcode) {
-    throw { message: description, code: errorcode };
-}
-function infiniteloop() {
-    while (true) { }
-}
-generateErrorCode("Error Happened", 402);
-infiniteloop();
+var Vehicle = /** @class */ (function () {
+    function Vehicle(t, c) {
+        this.type = t;
+        this.color = c;
+    }
+    return Vehicle;
+}());
+var car = new Vehicle('Ford', 'blue');
+console.log(car.color);
