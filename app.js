@@ -1,9 +1,8 @@
-var input1text = document.querySelector("#input1");
-var input2text = document.querySelector("#input2");
-var submitbutton = document.querySelector("button");
-function addNumbers(num1, num2) {
+function addFunctionNow(num1, num2, showResult1) {
+    console.log(showResult1);
     return num1 + num2;
 }
-submitbutton === null || submitbutton === void 0 ? void 0 : submitbutton.addEventListener("click", function () {
-    console.log(addNumbers(+input1text.value, +input2text.value));
-});
+var number1 = 5;
+var number2 = 4.5;
+var showResult = true;
+console.log(addFunctionNow(number1, number2, showResult));
