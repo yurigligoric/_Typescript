@@ -1,17 +1,11 @@
-function add(num1, num2) {
-    var result;
-    if (typeof num1 === 'number' && typeof num2 === 'number') {
-        result = num1 + num2;
-    }
-    else {
-        // if strings
-        result = num1.toString() + num2.toString();
-    }
-    return result;
+function sum(num1, num2) {
+    return num1 + num2;
 }
-var var1 = 5;
-var var2 = 6;
-var varstring1 = "heyoooo";
-var varstring2 = "yeheyyyyyy";
-console.log(add(var1, var2));
-console.log(add(varstring1, varstring2));
+function ResultOf(num3) {
+    var resultString = "Result is: ".concat(num3);
+    return resultString;
+}
+var AddTwoNumber;
+var AddOneNumber;
+AddTwoNumber = sum;
+AddOneNumber = ResultOf;
