@@ -1,15 +1,21 @@
-function sum(num1: number, num2: number){
-  return num1 + num2;
+let userData: unknown;
+let trueData: string;
+
+userData = 'now'
+userData = 5
+
+if(typeof userData === "string"){
+  trueData = userData
 }
 
-function ResultOf(num3 : number): string {
-  let resultString = `Result is: ${num3}`
-  return resultString;
+function generateErrorCode(description: string, errorcode: number) : never {
+  throw {message: description, code: errorcode}
+
 }
 
+function infiniteloop(): never {
+  while(true){}
+}
 
-let AddTwoNumber : (num1: number, num2: number) => number;
-let AddOneNumber : (num3: number) => string
-
-AddTwoNumber = sum;
-AddOneNumber = ResultOf;
+generateErrorCode("Error Happened", 402)
+infiniteloop();

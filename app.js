@@ -1,11 +1,15 @@
-function sum(num1, num2) {
-    return num1 + num2;
+var userData;
+var trueData;
+userData = 'now';
+userData = 5;
+if (typeof userData === "string") {
+    trueData = userData;
 }
-function ResultOf(num3) {
-    var resultString = "Result is: ".concat(num3);
-    return resultString;
+function generateErrorCode(description, errorcode) {
+    throw { message: description, code: errorcode };
 }
-var AddTwoNumber;
-var AddOneNumber;
-AddTwoNumber = sum;
-AddOneNumber = ResultOf;
+function infiniteloop() {
+    while (true) { }
+}
+generateErrorCode("Error Happened", 402);
+infiniteloop();
