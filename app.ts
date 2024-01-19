@@ -1,12 +1,16 @@
+enum Access {Admin, Moderator, User}
+
 const student: 
 { name: string;
   age: number;
   gender?: string;  
-  interest: string[]
+  interest: string[] 
+  access: Access;
 } = {
     name : 'Juan', 
     age: 129,
-    interest: ["basketball", "pingpong"]
+    interest: ["basketball", "pingpong"], 
+    access: Access.Admin
 }
 
-console.log(student.interest)
+console.log(student.access)
