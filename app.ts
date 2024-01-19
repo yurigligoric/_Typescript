@@ -1,13 +1,11 @@
-const input1text = document.querySelector("#input1") as HTMLInputElement;
-const input2text = document.querySelector("#input2") as HTMLInputElement;
-const submitbutton = document.querySelector("button");
-
-function addNumbers(num1 : number, num2 : number){
-    return num1+num2;
-
+function addFunctionNow(num1: number, num2: number, showResult1: boolean){
+    
+    console.log(showResult1)
+    return num1  + num2;   
 }
 
+const number1 = 5;
+const number2 = 4.5;
+const showResult = true;
 
-submitbutton?.addEventListener("click", ()=> {
-    console.log(addNumbers(+input1text.value, +input2text.value));
-}) 
+console.log(addFunctionNow(number1, number2, showResult));
