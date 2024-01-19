@@ -1,13 +1,17 @@
-var Access;
-(function (Access) {
-    Access[Access["Admin"] = 0] = "Admin";
-    Access[Access["Moderator"] = 1] = "Moderator";
-    Access[Access["User"] = 2] = "User";
-})(Access || (Access = {}));
-var student = {
-    name: 'Juan',
-    age: 129,
-    interest: ["basketball", "pingpong"],
-    access: Access.Admin
-};
-console.log(student.access);
+function add(num1, num2) {
+    var result;
+    if (typeof num1 === 'number' && typeof num2 === 'number') {
+        result = num1 + num2;
+    }
+    else {
+        // if strings
+        result = num1.toString() + num2.toString();
+    }
+    return result;
+}
+var var1 = 5;
+var var2 = 6;
+var varstring1 = "hey";
+var varstring2 = "yeheyyyyyy";
+console.log(add(var1, var2));
+console.log(add(varstring1, varstring2));
