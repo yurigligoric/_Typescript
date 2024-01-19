@@ -1,8 +1,13 @@
-function addFunctionNow(num1, num2, showResult1) {
-    console.log(showResult1);
-    return num1 + num2;
-}
-var number1 = 5;
-var number2 = 4.5;
-var showResult = true;
-console.log(addFunctionNow(number1, number2, showResult));
+var Access;
+(function (Access) {
+    Access[Access["Admin"] = 0] = "Admin";
+    Access[Access["Moderator"] = 1] = "Moderator";
+    Access[Access["User"] = 2] = "User";
+})(Access || (Access = {}));
+var student = {
+    name: 'Juan',
+    age: 129,
+    interest: ["basketball", "pingpong"],
+    access: Access.Admin
+};
+console.log(student.access);

@@ -1,11 +1,16 @@
-function addFunctionNow(num1: number, num2: number, showResult1: boolean){
-    
-    console.log(showResult1)
-    return num1  + num2;   
+enum Access {Admin, Moderator, User}
+
+const student: 
+{ name: string;
+  age: number;
+  gender?: string;  
+  interest: string[] 
+  access: Access;
+} = {
+    name : 'Juan', 
+    age: 129,
+    interest: ["basketball", "pingpong"], 
+    access: Access.Admin
 }
 
-const number1 = 5;
-const number2 = 4.5;
-const showResult = true;
-
-console.log(addFunctionNow(number1, number2, showResult));
+console.log(student.access)
