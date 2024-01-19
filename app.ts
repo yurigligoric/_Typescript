@@ -1,4 +1,6 @@
-function add(num1: number | string, num2: number | string){
+type NumberOrString = number | string;
+
+function add(num1: NumberOrString, num2: NumberOrString){
   let result;
   if(typeof num1 === 'number' && typeof num2 === 'number'){
     result = num1 +num2;
@@ -15,7 +17,7 @@ function add(num1: number | string, num2: number | string){
 
 const var1 = 5
 const var2 = 6
-const varstring1 = "hey"
+const varstring1 = "heyoooo"
 const varstring2 = "yeheyyyyyy"
 
 

@@ -11,7 +11,7 @@ function add(num1, num2) {
 }
 var var1 = 5;
 var var2 = 6;
-var varstring1 = "hey";
+var varstring1 = "heyoooo";
 var varstring2 = "yeheyyyyyy";
 console.log(add(var1, var2));
 console.log(add(varstring1, varstring2));
