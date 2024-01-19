@@ -1,13 +1,21 @@
-const input1text = document.querySelector("#input1") as HTMLInputElement;
-const input2text = document.querySelector("#input2") as HTMLInputElement;
-const submitbutton = document.querySelector("button");
+let userData: unknown;
+let trueData: string;
 
-function addNumbers(num1 : number, num2 : number){
-    return num1+num2;
+userData = 'now'
+userData = 5
+
+if(typeof userData === "string"){
+  trueData = userData
+}
+
+function generateErrorCode(description: string, errorcode: number) : never {
+  throw {message: description, code: errorcode}
 
 }
 
+function infiniteloop(): never {
+  while(true){}
+}
 
-submitbutton?.addEventListener("click", ()=> {
-    console.log(addNumbers(+input1text.value, +input2text.value));
-}) 
+generateErrorCode("Error Happened", 402)
+infiniteloop();

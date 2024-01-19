@@ -1,9 +1,15 @@
-var input1text = document.querySelector("#input1");
-var input2text = document.querySelector("#input2");
-var submitbutton = document.querySelector("button");
-function addNumbers(num1, num2) {
-    return num1 + num2;
+var userData;
+var trueData;
+userData = 'now';
+userData = 5;
+if (typeof userData === "string") {
+    trueData = userData;
 }
-submitbutton === null || submitbutton === void 0 ? void 0 : submitbutton.addEventListener("click", function () {
-    console.log(addNumbers(+input1text.value, +input2text.value));
-});
+function generateErrorCode(description, errorcode) {
+    throw { message: description, code: errorcode };
+}
+function infiniteloop() {
+    while (true) { }
+}
+generateErrorCode("Error Happened", 402);
+infiniteloop();
